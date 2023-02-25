@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: oswald,sans-serif;
+}
+body{
+    background:url(/IMG/IMG-20220208-WA0043.jpg);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+ul{
+    position: relative;
+    transform: skewY(-15deg);
+    transition: 0.5s;
+}
+ul li{
+    position: relative;
+    list-style: none;
+    width: 200px;
+    padding: 15px;
+    background: #2e312e;
+    z-index: var(--1);
+
+}
+ul li:hover{
+    background: blue;
+    transform: translateX(-50px);/*transform -50px on x-axis*/
+}
+ul li::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left: -40px;
+    width:40px;
+    height:100%;
+    transform-origin: right;
+    transform: skewY(45deg);
+    background: #2e312e;
+    transform: 0.05s;
+}
+ul li::after{
+    content:'';
+    position:absolute;
+    width:100%;
+    top:-40px;
+    left:0;
+    height: 40px;
+    background:#2e312e;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transform: 0.005s;
+}
+ul li a{
+    text-decoration: none;
+    color:#999;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.4s;
+}
+ul li:hover a{
+    color:#fff;
+
+}
+
+
+
+
+
+
+
+
+
